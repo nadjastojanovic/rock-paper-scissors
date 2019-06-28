@@ -1,0 +1,118 @@
+body {
+    background-color: #CFC62F !important;
+    max-height: 100vh;
+}
+
+/* Styling the left section */
+
+#left {
+    background-color: #AAC3CC;
+    border-radius: 50px;
+    margin-top: 30px;
+    padding: 15px;
+}
+
+#left h1 {
+    font-family: 'Staatliches', sans-serif;
+    font-size: 36px;
+}
+
+#left h2 {
+    font-family: 'Staatliches', sans-serif;
+    font-size: 30px;
+}
+
+#left p {
+    font-family: 'Roboto', sans-serif;
+    font-size: 15px;
+}
+
+.small {
+    font-size: 14px !important;
+}
+
+/* Styling the right section */
+
+#right {
+    margin-top: 100px;
+    font-size: 20px;
+}
+
+/* Styling the buttons */
+
+button {
+    font-family: 'Staatliches', sans-serif !important;
+    font-size: 30px !important;
+    width: 150px;
+    color: white;
+    border: 0;
+    border-radius: 30px !important;
+    margin-bottom: 30px !important;
+}
+
+#rock {
+    background-color: #C89D63;
+}
+
+#rock:hover {
+    background-color: #A67B41;
+}
+
+#paper {
+    background-color: #9CCB2D;
+}
+
+#paper:hover {
+    background-color: #7AA90B;
+}
+
+#scissors {
+    background-color: #82B7A6;
+}
+
+/* Styling the table displaying results */
+
+#compT {
+    display: inline-block;
+    border-right: 2px solid #AAC3CC;
+    width: 150px;
+    height: 70px;
+    margin: 0 !important;
+    font-family: 'Karla', sans-serif;
+}
+
+#playT {
+    display: inline-block;
+    border-left: 2px solid #AAC3CC;
+    width: 150px;
+    height: 70px;
+    margin: 0 !important;
+    font-family: 'Karla', sans-serif;
+}
+
+#compT p, #playT p {
+    margin-bottom: 0;
+}
+
+#compR, #playR {
+    border-top: 4px solid #AAC3CC;
+}
+
+/* Styling the results paragraph */
+
+#again {
+    text-align: left;
+    padding-left: 50px;
+    display: inline;
+}
+
+#againYes {
+    font-size: 20px !important;
+    width: 50px;
+    padding: 5px;
+    background-color: #82B7A6;
+}
+
+#againYes:hover, #scissors:hover {
+    background-color: #609584;
+}
