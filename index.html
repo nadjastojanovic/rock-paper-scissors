@@ -47,19 +47,17 @@
 
                     <br>
 
-                    <div id="compT">
+                    <div id="computerTable">
                         <p>Computer</p>
-                        <div id="compR">0</div>
-                    </div><div id="playT">
+                        <div id="computerResult">0</div>
+                    </div><div id="playerTable">
                         <p>You</p>
-                        <div id="playR">0</div>
+                        <div id="playerResult">0</div>
                     </div>
 
-                    <div id="add">
-                        <p id="end"></p>
-                        <p id="again"></p>
-                        <button id="againYes" onclick="refreshPage()">YES</button>
-                    </div>
+                    <p id="finalResult"></p>
+                    <p id="askAgain"></p>
+                    <button id="againYes" onclick="refreshPage()">YES</button>
                 </div>
             </div>
         </center>
@@ -69,46 +67,42 @@
             let againYes = document.getElementById("againYes");
             againYes.style.opacity = "0";
         
-            let compR = 0;
-            let playR = 0;
+            let computerResult = 0;
+            let playerResult = 0;
 
             function refreshPage(){
                 window.location.reload();
             } 
 
-            function playRound(playS){
+            function playRound(playerSelection){
                 
-                let compS = Math.floor(Math.random()*3);
+                let computerSelection = Math.floor(Math.random()*3);
 
-                if(compS == 0){
-                    compS = "rock";
-                }else if(compS == 1){
-                    compS = "paper";
+                if(computerSelection == 0){
+                    computerSelection = "rock";
+                }else if(computerSelection == 1){
+                    computerSelection = "paper";
                 }else{
-                    compS = "scissors";
-                }
-                console.log(compS);
-
-                let compP = document.getElementById('compR');
-                let playP = document.getElementById('playR');
-
-                if(compS == playS){}
-                else if(compS == "rock" && playS == "scissors" || compS == "paper"
-                    && playS == "rock" || compS == "scissors" && playS == "paper"){
-                    compR += 1;
-                }else{
-                    playR += 1;
+                    computerSelection = "scissors";
                 }
 
-                compP.textContent = compR;
-                playP.textContent = playR;
+                if(computerSelection == playerSelection){}
+                else if(computerSelection == "rock" && playerSelection == "scissors" || computerSelection == "paper"
+                    && playerSelection == "rock" || computerSelection == "scissors" && playerSelection == "paper"){
+                    computerResult += 1;
+                }else{
+                    playerResult += 1;
+                }
 
-                let para = document.getElementById("end");
-                let askAgain = document.getElementById("again");
+                document.getElementById('computerResult').textContent = computerResult;
+                document.getElementById('playerResult').textContent = playerResult;
 
-                if(compR == 5){
-                    para.textContent = "The computer won! Don't feel too bad ❤️";
-                    para.setAttribute("style", "margin-top: 30px; padding: 10px; color: white; width: 90%; border-radius: 25px; background-color: #9CCB2D;");
+                let finalResult = document.getElementById("finalResult");
+                let askAgain = document.getElementById("askAgain");
+
+                if(computerResult == 5){
+                    finalResult.textContent = "The computer won! Don't feel too bad ❤️";
+                    finalResult.setAttribute("style", "margin-top: 30px; padding: 10px; color: white; width: 90%; border-radius: 25px; background-color: #9CCB2D;");
                     
                     askAgain.textContent = "Do you want to play again?";
                     againYes.style.opacity = "1";
@@ -116,9 +110,9 @@
                     document.getElementById("rock").disabled = true;
                     document.getElementById("paper").disabled = true; 
                     document.getElementById("scissors").disabled = true; 
-                }else if(playR == 5){
-                    para.textContent = "You won! Way to go ☻";
-                    para.setAttribute("style", "margin-top: 30px; padding: 10px; color: white; width: 90%; border-radius: 25px; background-color: #9CCB2D;");
+                }else if(playerResult == 5){
+                    finalResult.textContent = "You won! Way to go ☻";
+                    finalResult.setAttribute("style", "margin-top: 30px; padding: 10px; color: white; width: 90%; border-radius: 25px; background-color: #9CCB2D;");
                     
                     askAgain.textContent = "Do you want to play again?";
                     againYes.style.opacity = "1";

@@ -72,7 +72,7 @@ button {
 
 /* Styling the table displaying results */
 
-#compT {
+#computerTable {
     display: inline-block;
     border-right: 2px solid #AAC3CC;
     width: 150px;
@@ -81,7 +81,7 @@ button {
     font-family: 'Karla', sans-serif;
 }
 
-#playT {
+#playerTable {
     display: inline-block;
     border-left: 2px solid #AAC3CC;
     width: 150px;
@@ -90,17 +90,17 @@ button {
     font-family: 'Karla', sans-serif;
 }
 
-#compT p, #playT p {
+#computerTable p, #playerTable p {
     margin-bottom: 0;
 }
 
-#compR, #playR {
+#computerResult, #playerResult {
     border-top: 4px solid #AAC3CC;
 }
 
 /* Styling the results paragraph */
 
-#again {
+#askAgain {
     text-align: left;
     padding-left: 50px;
     display: inline;
